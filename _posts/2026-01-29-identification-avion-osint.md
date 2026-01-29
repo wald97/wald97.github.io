@@ -6,10 +6,10 @@ tags: [CTFREI, avion]
 
 image:
   path: /assets/img/covers/avion.jpg
-  alt: "Avion"
+  
 ---
 
-# ✈️ Avion ✈️
+
 
 **Catégorie :** OSINT  
 **Difficulté :** Easy  
@@ -63,9 +63,7 @@ Le modèle identifié est :
 
 **Xian Y-20**
 
-<figure>
-  <img src="/assets/img/ctfrei/xian-y-20.jpg" alt="Xian Y-20 – avion de transport militaire chinois">
-  <figcaption>Xian Y-20 – Avion de transport militaire</figcaption>
+<figure>  <img src="/assets/img/ctfrei/xian-y-20.jpg" alt="Xian Y-20 – avion de transport militaire chinois">
 </figure>
 
 ---
