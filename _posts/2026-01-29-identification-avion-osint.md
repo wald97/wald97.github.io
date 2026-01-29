@@ -19,7 +19,7 @@ image:
 
 ## Énoncé du challenge
 
-{% hint style="info" %}
+{: .prompt-info }
 #### Avion
 
 ***
@@ -36,7 +36,7 @@ Je n’ai pas pu le photographier, mais plusieurs caractéristiques visuelles m�
 À partir de ces seuls éléments, l’objectif est d’identifier précisément le modèle de cet avion.
 
 **Format attendu :** `CTFREI{Mark_A-60}`
-{% endhint %}
+
 ---
 
 ## Démarche OSINT
