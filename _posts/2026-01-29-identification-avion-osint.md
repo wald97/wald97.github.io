@@ -1,15 +1,15 @@
 ---
 title: "Identification d’un avion militaire par caractéristiques visuelles"
 date: 2024-10-10 15:00:00 +0100
-categories: [OSINT, Write-up]
+categories: [OSINT, CTFREI]
 tags: [CTFREI, avion]
+excerpt: >
+  Challenge visant à identifier un avion militaire
+  grâce à l’observation de ses caractéristiques externes.
 
 image:
   path: /assets/img/covers/avion.jpg
-  
 ---
-
-
 
 **Catégorie :** OSINT  
 **Difficulté :** Easy  
@@ -18,6 +18,11 @@ image:
 ---
 
 ## Énoncé du challenge
+
+{% hint style="info" %}
+#### Avion
+
+***
 
 Lors d’un passage aérien au-dessus de mon domicile, j’ai aperçu un avion particulièrement imposant.  
 Je n’ai pas pu le photographier, mais plusieurs caractéristiques visuelles m’ont marqué :
@@ -31,14 +36,14 @@ Je n’ai pas pu le photographier, mais plusieurs caractéristiques visuelles m�
 À partir de ces seuls éléments, l’objectif est d’identifier précisément le modèle de cet avion.
 
 **Format attendu :** `CTFREI{Mark_A-60}`
-
+{% endhint %}
 ---
 
 ## Démarche OSINT
 
 Pour cette recherche, j’ai utilisé un outil de reconnaissance d’aéronefs basé sur des critères visuels et techniques :
 
-- https://www.aircraftrecognitionguide.com/identify-aircraft/identify-by-airplane-characteristics
+- [**Aircraft recognition guide**](https://www.aircraftrecognitionguide.com/identify-aircraft/identify-by-airplane-characteristics)
 
 La méthode consiste à filtrer progressivement les modèles existants à partir des caractéristiques observables.
 
