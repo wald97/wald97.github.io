@@ -12,3 +12,7 @@
 .callout.info a {
   color: var(--link-color);
 }
+
+
+/* append your custom style below */
+body { outline: 6px solid red !important; }
