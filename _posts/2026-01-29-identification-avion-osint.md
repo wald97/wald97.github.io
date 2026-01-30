@@ -1,4 +1,4 @@
----
+﻿---
 title: "Identification d’un avion militaire par caractéristiques visuelles"
 date: 2024-10-10 15:00:00 +0100
 categories: [OSINT, CTFREI]
@@ -19,23 +19,21 @@ image:
 
 ## Énoncé du challenge
 
+> #### Avion
+>
+> Lors d’un passage aérien au-dessus de mon domicile, j’ai aperçu un avion particulièrement imposant.  
+> Je n’ai pas pu le photographier, mais plusieurs caractéristiques visuelles m’ont marqué :
+>
+> - Quatre moteurs à réaction positionnés sous les ailes  
+> - Des ailes en flèche, fixées en hauteur sur le fuselage  
+> - Un empennage en T avec une configuration classique  
+> - Un nez fin, non bosselé, avec une roue de train d’atterrissage visible  
+> - Un drapeau rouge présent sur la dérive  
+>
+> À partir de ces seuls éléments, l’objectif est d’identifier précisément le modèle de cet avion.
+>
+> **Format attendu :** `CTFREI{Mark_A-60}`
 {: .prompt-info }
-#### Avion
-
-***
-
-Lors d’un passage aérien au-dessus de mon domicile, j’ai aperçu un avion particulièrement imposant.  
-Je n’ai pas pu le photographier, mais plusieurs caractéristiques visuelles m’ont marqué :
-
-- Quatre moteurs à réaction positionnés sous les ailes  
-- Des ailes en flèche, fixées en hauteur sur le fuselage  
-- Un empennage en T avec une configuration classique  
-- Un nez fin, non bosselé, avec une roue de train d’atterrissage visible  
-- Un drapeau rouge présent sur la dérive  
-
-À partir de ces seuls éléments, l’objectif est d’identifier précisément le modèle de cet avion.
-
-**Format attendu :** `CTFREI{Mark_A-60}`
 
 ---
 
