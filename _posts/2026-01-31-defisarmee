@@ -1,0 +1,230 @@
+---
+title: "Armée de terre — Enquête TikTok (Louis Warcell)"
+date: 2026-01-31
+categories: [CTF, OSINT]
+tags: [tiktok, youtube, steganographie, crypto, what3words, qrcode, enquete]
+excerpt: "Enquête OSINT en plusieurs phases depuis TikTok : IP, comptes en chaîne, Louis Warcell, La Fontaine, what3words, stego, Vigenère et artefacts Drive menant à une échéance."
+image:
+  path: /assets/img/covers/armee.png
+---
+
+## Contexte
+
+Tout débute par une vidéo intrigante publiée sur TikTok par un compte lié à l’Armée de terre.  
+Un homme masqué y apparaît et donne des instructions.
+
+Un premier pivot ressort rapidement : **l’adresse IP 186.91.129.35**.  
+Un WHOIS donne un lieu, sans informations réellement exploitables.
+
+En revanche, cette IP est réutilisée comme identifiant TikTok, ce qui déclenche une piste beaucoup plus intéressante.
+
+<figure>
+  <img src="/assets/img/armee/piratage.jpg" alt="piratage depart">
+</figure>
+
+---
+
+## Chaîne de comptes — *Follow the white rabbit*
+
+Sur TikTok, plusieurs comptes se suivent et utilisent une symbolique de cartes :
+
+1- **As de pique** : [**`@186.91.129.35`**](https://www.tiktok.com/@186.91.129.35)
+Sur la video on peux voir un `@ 1869` puis `follow`.
+
+Si on tape **@1869follow** on obtient un autre compte.
+
+2- **As de cœur** : [**`@1869follow`**](https://www.tiktok.com/@1869follow)
+Meme chose une vidéo sur le compte, on peut voir `1869` puis `thewhite`.
+
+Si on tape **@1869thewhite**, on obtient un autre compte.
+
+3- **As de carreau** : [**`@1869thewhite`**](https://www.tiktok.com/@1869thewhite)
+Meme processus une vidéo avec `1869` et `rabbit`.
+
+On tape **@1869rabbit**, on obtient un dernier compte.
+
+4- **As de trèfles** : [**`@1869rabbit`**](https://www.tiktok.com/@1869rabbit)
+
+Les vidéos, mises bout à bout, permettent d’identifier un nom clé :
+
+> **Louis Warcell**
+
+<figure>
+  <img src="/assets/img/armee/louiswarcell.png" alt="Louiswarcell">
+</figure>
+
+Un nouveau compte devient alors central dans l’enquête : [**`@louiswarcell`**](https://www.tiktok.com/@louiswarcell).
+
+---
+
+## Pivot Louis Warcell
+
+Le compte contient :
+- des tâches codées,
+- des indices visuels et textuels,
+- des références littéraires,
+- des coordonnées géographiques,
+- un lien vers un [**Discord**](https://discord.gg/58YWesnWCM).
+
+On rentre dans un ARG , sur le thème d'alice au pays des merveilles.
+
+Le compte Tiktok de Louis warcell publiera en fur et a mesure des vidéos avec des missions à réaliser et de les valider sur le discord en rentrant le flag.  
+
+---
+
+## Mission 1 — Retrouver l'amplacement de Louis
+
+### Première vidéo tiktok 
+
+{%
+  include embed/video.html
+  src='/assets/video/louis1.mp4'
+  autoplay=true
+  loop=true
+  muted=true
+%}
+
+### Indices fournis
+On va examiner la vidéo en détail. On peut voir plein d'indice et la premier task à réaliser.
+
+<figure>
+  <img src="/assets/img/armee/task1.jpg" alt="task 1">
+</figure>
+
+Des indices dans le décor de la vidéo.
+
+<figure>
+  <img src="/assets/img/armee/indicetask1.jpg" alt="indices dans le décor">
+</figure>
+
+On a donc tout ceci.
+- `RES-YE-881`
+- `17V`
+- annotation `EOF FF ij`
+- présence du nombre **1621**,
+- image récurrente d’une **fontaine**.
+
+Ces éléments mènent à une piste littéraire claire : **Jean de La Fontaine**, né en **1621**.
+
+### Démarche osint
+
+- La recherche de `RES-YE-881` mène à un recueil de fables sur [**Gallica**](https://gallica.bnf.fr/ark:/12148/btv1b8610825d/f287.item.r=BnF,%20R%C3%A9serve%20des%20livres%20rares,%20RES-YE-881).
+- `17V` correspond à la **17ᵉ fable du livre V** : *Le lièvre et la perdrix*.
+- Le dernier mot du titre est extrait : **perdrix**.
+- Le token central `.tournure.` est indiqué comme **fixe**.
+- L’indice météo + coordonnées (entre 23°27’ nord et sud) désignent l’`alizé` qui se rapproche de **Azile** le mot de fin de la fable à coté de **Ff ij**.
+
+Ce qui nous donne: `///perdrix.tournure.alizé`
+
+Le format attendu correspond à un [**what3words**](https://what3words.com/perdrix.tournure.aliz%C3%A9).
+
+### Résolution Mission 1
+
+La position de What3words nous donne l'emplacement de l'hôtel `l’Ortega à Saint-Jacques-de-la-Lande`. 
+
+## Flag 1
+
+`///perdrix.tournure.alizé`
+
+---
+
+## Phase de transition — Vers la mission 2
+
+Les phases de transition étaient des défis à faire pour nous faire patienter sur la prochaine mission.
+
+### Nouveau pivot identifié
+
+Un nouveau compte apparaît dans les abonnements de **@louiswarcell** :
+
+- [**@1869lechapelier**](https://www.tiktok.com/@1869lechapelier)
+
+Le compte semble jouer un rôle de **joker / attente**, probablement destiné à faire patienter avant la suite du scénario.
+
+---
+
+### Une vidéo est présente
+
+{%
+  include embed/video.html
+  src='/assets/video/chapelier1.mp4'
+  autoplay=true
+  loop=true
+  muted=true
+%}
+
+### Message chiffré (ROT13)
+
+Un texte est visible en haut d’une vidéo du compte.
+
+- Texte chiffré : ROT13
+- Résultat :
+  
+> **« je vous vois même la nuit »**
+
+
+---
+
+### Décryptage du message vidéo
+
+La description de la vidéo contient plusieurs phrases.  
+Méthode utilisée :
+
+- Récupération de **la première lettre de chaque phrase**
+- Hypothèse : *seules les premières comptent*
+
+| Phrase | Lettre |
+|------|--------|
+| hélas, seules les premières comptent. | h |
+| Regarder les heures passer. | R |
+| vite, les minutes s’enchaînent. | v |
+| Aujourd’hui devient hier. | A |
+| zone après zone, la lumière change. | z |
+| garder une trace. | g |
+| observer le temps qui file. | o |
+| une journée, puis une autre. | u |
+| garder la mémoire. | g |
+| Week-end ou semaine, tout s’écoule. | W |
+| Yeux fermés, on recule. | Y |
+
+**Chaîne obtenue :**
+
+hRvAzgougWY
+
+---
+
+### Pivot vers YouTube
+
+La chaîne de caractères mène à une [**vidéo YouTube**](https://www.youtube.com/watch?v=hRvAzgougWY) car la chaine de carathère est de 11.
+
+Le titre est :
+
+> **« C'est pour bientôt mais quand »**
+
+Indice clair : **la temporalité est centrale**  
+La question n’est pas *quoi*, mais **quand**
+
+---
+
+### Analyse audio (spectrale)
+
+Une analyse spectrale de l’audio de la vidéo révèle un message caché :
+
+> **« ne pas oublier l'alchimiste d'acier 310 »**
+
+<figure>
+  <img src="/assets/img/armee/spectre.png" alt="Résultat spectrale">
+</figure>
+
+---
+
+### Hypothèses OSINT
+
+- **Temps / attente / date** = axe principal
+- **Alchimiste d’acier 310** :
+  - Référence à full métal alchimiste
+
+- **Ne pas oublier** :
+  - Fait référence à don't forget 3 oct
+
+Transition confirmée vers la **mission 2**, pour le **3 octobre**.
+
