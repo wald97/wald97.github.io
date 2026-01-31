@@ -1,8 +1,8 @@
 ﻿---
 title: "Avion"
-date: 2024-10-10 15:00:00 +0100
+date: 2024-10-10
 categories: [OSINT, CTFREI]
-tags: [CTFREI, avion]
+tags: [avion]
 description: Challenge visant à identifier un avion militaire grâce à l’observation de ses caractéristiques externes.
 
 image:
