@@ -1,11 +1,9 @@
 ﻿---
-title: "Identification d’un avion militaire par caractéristiques visuelles"
+title: "Avion"
 date: 2024-10-10 15:00:00 +0100
 categories: [OSINT, CTFREI]
 tags: [CTFREI, avion]
-excerpt: >
-  Challenge visant à identifier un avion militaire
-  grâce à l’observation de ses caractéristiques externes.
+description: Challenge visant à identifier un avion militaire grâce à l’observation de ses caractéristiques externes.
 
 image:
   path: /assets/img/covers/avion.jpg

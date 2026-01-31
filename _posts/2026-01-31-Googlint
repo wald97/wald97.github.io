@@ -1,0 +1,61 @@
+---
+title: "Googlint"
+date: 2024-10-10
+categories: [OSINT, CTFREI]
+tags: [CTFREI, googlint]
+description: Retrouver des informations en sources ouvertes
+
+image:
+  path: /assets/img/covers/metallica.png
+---
+
+
+# Googlint
+
+**Catégorie :** OSINT  
+**Difficulté :** Easy  
+**Flag :** CTFREI{metallica}
+
+---
+
+## Énoncé du challenge
+
+>### Googlint
+>Le **Googlint** consiste à exploiter uniquement les moteurs de recherche pour
+>collecter et recouper des informations issues de sources ouvertes.
+>Cette méthode repose sur le choix des bons mots-clés et l’analyse des résultats.
+>
+>Un groupe de musique, formé en **1981**, est connu sous le surnom  
+>**“The Four Horsemen”**.
+>
+>**Format attendu :** `CTFREI{nom}`
+{: .prompt-info }
+
+---
+
+## Démarche OSINT
+
+- Recherche Google avec les mots-clés :
+  - `The Four Horsemen band 1981`
+  - `metal band Four Horsemen nickname`
+- Consultation de sources ouvertes :
+  - Wikipédia
+  - Articles musicaux
+  - Biographies du groupe
+
+---
+
+## Analyse des résultats
+
+- Les sources concordent sur un même groupe
+- Le surnom fait référence à un morceau emblématique
+- Le groupe a été fondé au début des années 1980
+
+<figure>  <img src="/assets/img/ctfrei/metallica.jpg" alt="métallica confirmation">
+</figure>
+
+---
+
+## Flag
+
+CTFREI{metallica}
