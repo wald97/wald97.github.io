@@ -1,7 +1,7 @@
 ---
 title: "Armée de terre — Enquête TikTok (Louis Warcell)"
 date: 2026-01-31
-categories: [CTF, OSINT]
+categories: [ENQUÊTE, Armée]
 tags: [tiktok, youtube, steganographie, crypto, what3words, qrcode, enquete]
 excerpt: "Enquête OSINT en plusieurs phases depuis TikTok : IP, comptes en chaîne, Louis Warcell, La Fontaine, what3words, stego, Vigenère et artefacts Drive menant à une échéance."
 image:
