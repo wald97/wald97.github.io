@@ -47,10 +47,6 @@ image:
 >• Aucune intrusion ou contournement de protections  
 {: .prompt-info }
 
-<figure>
-  <img src="/assets/img/osint.industries/hadjej/interpol.png" alt="Red Notice Interpol">
-</figure>
-
 ---
 
 ## Démarche OSINT
@@ -64,72 +60,36 @@ image:
 
 ### 2. Recherche d’empreinte numérique
 - Recherche du nom **Olivier Hadjej** sur les réseaux sociaux
-- Découverte d’un compte Facebook portant ce nom
+- Découverte de plusieurs compte Facebook portant ce nom
 
 <figure>
-  <img src="/assets/img/osint.industries/hadjej/facebook.png" alt="Profil Facebook">
+  <img src="/assets/img/osint.industries/hadjej/olivier.jpg" alt="Profils Facebook">
 </figure>
 
 ---
 
 ### 3. Vérification de l’identité
 - Analyse des photos publiées
-- Présence d’un permis de conduire partagé publiquement
+- Présence d’un [**permis de conduire**](https://www.facebook.com/photo.php?fbid=758231784196560&set=pb.100000292372379.-2207520000&type=3&locale=fr_FR) partagé publiquement
 - Date de naissance **identique** à celle de la Red Notice Interpol
 
 Conclusion :
-➡️ Forte probabilité qu’il s’agisse du **bon individu**
+ Forte probabilité qu’il s’agisse du **bon individu** sur le compte facebook [**olivier.hadje**](https://www.facebook.com/olivier.hadjej?locale=fr_FR)
+
+On peut aussi confirmer avec la photo de son collier qu'on trouve sur Interpol.
 
 <figure>
-  <img src="/assets/img/osint.industries/hadjej/id.png" alt="Date de naissance confirmée">
+  <img src="/assets/img/osint.industries/hadjej/confirmation.jpg" alt="Profils Facebook">
 </figure>
 
 ---
 
-### 4. Guesstimation contrôlée
-- Hypothèses basées sur :
-  - Année de naissance : 1967
-  - Pays : Israël → France
-  - Profil technique / ingénierie
-- Utilisation d’un prompt IA pour proposer des domaines d’emails plausibles
+### Analyse de la page facebook 
+Si on scrool bien dans la page on peux voir en 22 octobre 2011, qu'il a posté son adresse email.
 
 <figure>
-  <img src="/assets/img/osint.industries/hadjej/ai.png" alt="Prompt IA">
+  <img src="/assets/img/osint.industries/hadjej/email.jpg" alt="Adresse email">
 </figure>
-
-Domaines retenus :
-- `@hotmail.com`
-- `@walla.co.il`
-- `@netvision.net.il`
-- `@012.net.il`
-
-Usernames probables :
-- `olivierhadjej`
-- `olivier.hadjej`
-
----
-
-### 5. Vérification via Have I Been Pwned
-- Utilisation du service **Have I Been Pwned**
-- Méthode légale et éthique
-- Recherche de correspondances email ↔ fuites de données connues
-
-Pourquoi cet outil est acceptable :
-- Pas de stockage des données recherchées
-- Basé sur des fuites **publiquement documentées**
-- Utilisé à des fins de **cybersécurité et prévention**
-- Consentement implicite via usage volontaire
-
-<figure>
-  <img src="/assets/img/osint.industries/hadjej/hibp.png" alt="Have I Been Pwned">
-</figure>
-
----
-
-### 6. Résultat
-- Une des adresses testées apparaît dans l’historique de violations
-- Présence dans des fuites connues → forte probabilité d’existence réelle
-- Cette adresse est retenue comme **pivot OSINT crédible**
 
 ---
 
