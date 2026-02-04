@@ -16,7 +16,7 @@ image:
 
 ## Énoncé du challenge
 
->### Holehe & The Secret Email
+>### Holehe & The Secret email
 >
 >Description :  
 >Vous enquêtez sur l’origine d’un outil OSINT populaire permettant de faire du pivot à partir d’adresses email : **Holehe**.  
@@ -86,8 +86,8 @@ image:
 ---
 
 ### 5. Datation du compte ProtonMail
-L’adresse étant hébergée sur **protonmail.com**, il est possible de récupérer la date via l'api proton `<https://api.protonmail.ch/pks/lookup?op=index&search=megadose@protonmail.com>`.
-Cela nous donne 
+L’adresse étant hébergée sur **protonmail.com**, il est possible de récupérer la date via l'API Proton `<https://api.protonmail.ch/pks/lookup?op=index&search=megadose@protonmail.com>`.
+Cela nous donne :
 
 ```bash
 info: 1:1

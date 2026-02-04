@@ -60,7 +60,7 @@ image:
 
 ### 2. Recherche d’empreinte numérique
 - Recherche du nom **Olivier Hadjej** sur les réseaux sociaux
-- Découverte de plusieurs compte Facebook portant ce nom
+- Découverte de plusieurs comptes Facebook portant ce nom
 
 <figure>
   <img src="/assets/img/osint.industries/hadjej/olivier.jpg" alt="Profils Facebook">
@@ -85,7 +85,7 @@ On peut aussi confirmer avec la photo de son collier qu'on trouve sur Interpol.
 ---
 
 ### Analyse de la page facebook 
-Si on scrool bien dans la page on peux voir en 22 octobre 2011, qu'il a posté son adresse email.
+Si on scroll bien dans la page on peut voir le 22 octobre 2011, qu'il a posté son adresse email.
 
 <figure>
   <img src="/assets/img/osint.industries/hadjej/email.jpg" alt="Adresse email">
