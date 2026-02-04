@@ -54,7 +54,7 @@ image:
 - Le créateur identifié est **PALENATH**, également connu sous le pseudonyme [**megadose**](https://github.com/megadose)
 
 <figure>
-  <img src="/assets/img/osint.industries/holehe/créateur.jpg" alt="Profil GitHub de megadose">
+  <img src="/assets/img/osint.industries/holehe/createur.jpg" alt="Profil GitHub de megadose">
 </figure>
 
 ---
@@ -80,7 +80,7 @@ image:
   - Cette mention est présente dès les premières versions du dépôt
 
 <figure>
-  <img src="/assets/img/osint.industries/holehe/email commit.jpg" alt="Email commit">
+  <img src="/assets/img/osint.industries/holehe/email_commit.jpg" alt="Email commit">
 </figure>
 
 ---
@@ -98,7 +98,7 @@ uid : megadose@protonmail.com <megadose@protonmail.com> : 1610617266: :
 - Conversion du timestamp en date lisible via le site [**Epoch converter**](https://www.epochconverter.com/)
 
 <figure>
-  <img src="/assets/img/osint.industries/holehe/time.jpg" alt="Conversion timestamp">
+  <img src="/assets/img/osint.industries/holehe/time_validation.jpg" alt="Conversion timestamp">
 </figure>
 
 ---
