@@ -110,12 +110,14 @@ On finit par trouver la [**page suivante**](https://raidforums.com/Forum-Comboli
 ### 4. Corrélation via la fuite RaidForums
 
 - RaidForums a subi une fuite majeure en [**2023**](https://haveibeenpwned.com/Breach/RaidForums) :
-  - >400 000 utilisateurs exposés
+  - 400 000 utilisateurs exposés
   - événement documenté par Have I Been Pwned
 
 Corrélation passive :
 - **Username :** RoNey  
 - **Email associé :** `roneyads1@gmail.com`
+
+J'ai pris l'outil suivant pour voir les leaks : [**OSINTleak**](https://osintleak.com/fr).
 
 <figure>
   <img src="/assets/img/osint.industries/found the hacker/raidfoumleak.png" alt="Leak RaidForums identifié">
