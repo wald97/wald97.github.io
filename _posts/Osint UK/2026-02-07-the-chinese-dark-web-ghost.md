@@ -252,7 +252,7 @@ L’approche est strictement **passive, analytique et éthique**.
 
 ### Démarche
 
-- Pour trouver le site des QQ, j'ai dork avec  ` inurl:qq_tel.html`. On tombe que  sur un résultat et il a bien **av** dans l'URL.
+- Pour trouver le site des QQ, j'ai dork avec `inurl:qq_tel.html`. On tombe que  sur un résultat et il a bien **av** dans l'URL.
 - Outil identifié : <https://avsov.com/qq_tel.html>
 - Recherche QQ : `751247452`
 - Deux numéros retournés `13537259958 et 13713693580`
@@ -410,6 +410,7 @@ Le site n'est plus indexé on ne le trouve plus sur Google avec une simple reche
 
 ### Démarche
 On peux voir déjà la constitution d'un [**numéro de téléphone chinois sur wikipédia**](https://fr.wikipedia.org/wiki/Plan_de_num%C3%A9rotation_t%C3%A9l%C3%A9phonique_en_Chine)
+On arrive à définir que notre préfixe de numéro est `136 3471`, car on prend les 7 premiers chiffres.
 - Préfixe `136` → il est donc chez l'opérateur `China Mobile` qui s'ecrit en chinois `中国移动`
 - Pour la recherche régionale, je suis passer sur un [**site**](http://so.qqdna.com/nub/13634717841.html) qui indique tout les préfixes avec la zone géographique. On obtient `Hohhot, Mongolie-Intérieure` en chinois`内蒙古 呼和浩特`
 
@@ -460,7 +461,7 @@ On rentre le numéro de téléphone `13634717841`. On obtient l'UID suivant `559
 
 J'ai donc pris l'adresse **weibo** et rajouté l'**UID** à la fin.
 
-- Profil : https://weibo.com/5599047671
+- Profil : <https://weibo.com/5599047671>
 - Username : **猪头肉肉1314**
 
 <figure>
@@ -519,7 +520,7 @@ Toujours sur le [**Weibo**](https://weibo.com/5599047671), on regarde le slogan 
 {: .prompt-info }
 
 ### Démarche
-On peut voir des photo sur son profil
+On peut voir des photos sur son profil
 
 <figure>
   <img src="/assets/img/osint.uk/the-chinese-dark-web-gosht/photodeprofil.png" alt="Photo sur le profil weibo">
