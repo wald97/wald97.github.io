@@ -1,0 +1,32 @@
+DISCLAIMER: This CTF takes you through a real investigative process where you
+			will join a real Telegram group and search a user within it. Please
+			ensure you are comfortable with your operation security before starting.
+			NO DOWNLOADS REQUIRED - NO INTERACTION WITH PEOPLE REQUIRED
+
+	\ MADE BY EVA PROKOFIEV (EPCYBER)
+
+═════════════════════════════════════════════════════════════════════
+
+BRIEFING
+
+═════════════════════════════════════════════════════════════════════
+
+A user in a Chinese underground Telegram community is promoting what we believe to be illegal gambling services. Their promotional messages appear professional — "quality guaranteed," "after-sales support," "no worries" — suggesting organization rather than opportunistic posting.
+
+We believe this operator may have connections to legitimate business infrastructure, potentially using corporate fronts to facilitate underground activity.
+
+Your task is to trace their digital footprint and confirm their real-world identity using open source techniques.
+
+The investigation begins behind a +86 login wall. A Chinese developer blog contains intelligence on dark web forums, but access is restricted. You will need to find a way through.
+
+Objectives:
+
+    • Bypass content restrictions to identify the dark web forum
+    • Locate the associated Telegram community with that forum
+    • Identify the gambling promoter within the channel
+    • Trace their QQ contact to phone infrastructure
+    • Uncover connections to legitimate business operations
+    • Pivot through archived data to find secondary identifiers
+    • Confirm identity via Chinese social media correlation
+
+═════════════════════════════════════════════════════════════════════
