@@ -225,6 +225,27 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
   color: #22c55e;
 }
 
+.rank-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .25em;
+  font-size: .68rem;
+  font-weight: 600;
+  color: #6eb4ff;
+  text-decoration: none;
+  border: 1px solid #4a6fa555;
+  border-radius: 20px;
+  padding: .15em .5em;
+  transition: background .2s;
+  margin-top: .1rem;
+  align-self: flex-start;
+}
+.rank-link:hover {
+  background: #4a6fa522;
+  text-decoration: none;
+  color: #6eb4ff;
+}
+
 @media (max-width: 600px) {
   .rankings-grid { grid-template-columns: 1fr 1fr; }
   .certs-grid    { grid-template-columns: 1fr; }
@@ -256,6 +277,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <span class="rank-value">Top 6</span>
       <span class="rank-badge badge-silver">🥈 Argent</span>
     </div>
+    <a class="rank-link" href="https://iosint.fr/classement_general.cgi" target="_blank" rel="noopener">🔗 Profil</a>
   </div>
 
   <div class="rank-card">
@@ -266,6 +288,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <span class="rank-value">Top 3</span>
       <span class="rank-badge badge-gold">⭐ Or</span>
     </div>
+    <a class="rank-link" href="https://en.osint4fun.eu/user/a0d7502406a4cca8/" target="_blank" rel="noopener">🔗 Profil</a>
   </div>
 
   <div class="rank-card">
@@ -276,6 +299,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <span class="rank-value">Top 3</span>
       <span class="rank-badge badge-gold">⭐ Or</span>
     </div>
+    <a class="rank-link" href="https://challenges.osintopia.fr/teams/49" target="_blank" rel="noopener">🔗 Profil</a>
   </div>
 
   <div class="rank-card">
@@ -286,6 +310,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <span class="rank-value">Top 5</span>
       <span class="rank-badge badge-silver">🥈 Argent</span>
     </div>
+    <a class="rank-link" href="https://ctf.osint.industries/users/57" target="_blank" rel="noopener">🔗 Profil</a>
   </div>
 
   <div class="rank-card">
@@ -296,6 +321,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <span class="rank-value">Top 7</span>
       <span class="rank-badge badge-silver">🥈 Argent</span>
     </div>
+    <a class="rank-link" href="https://ctf.osintnewsletter.com/users/445" target="_blank" rel="noopener">🔗 Profil</a>
   </div>
 
   <div class="rank-card">
@@ -306,6 +332,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <span class="rank-value">Top 7</span>
       <span class="rank-badge badge-silver">🥈 Argent</span>
     </div>
+    <a class="rank-link" href="https://ctf.osint.uk/users/451" target="_blank" rel="noopener">🔗 Profil</a>
   </div>
 
   <div class="rank-card">
@@ -316,6 +343,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <span class="rank-value">Top 17</span>
       <span class="rank-badge badge-blue">🔵 Bleu</span>
     </div>
+    <a class="rank-link" href="https://ctf.challenge-osint.fr/teams#5d284c69-9589-434c-879c-702d9830fae2" target="_blank" rel="noopener">🔗 Profil</a>
   </div>
 
   <div class="rank-card">
@@ -323,7 +351,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <span class="rank-platform">RootMe</span>
     </div>
     <div class="rank-row">
-      <span class="rank-value">Actif</span>
+      <span class="rank-value">19017e 🔵</span>
       <span class="rank-badge badge-default"><span class="live-dot"></span> Actif</span>
     </div>
   </div>
@@ -349,7 +377,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
     <div class="cert-info">
       <div class="cert-name">Opération Bellatrix</div>
       <div class="cert-issuer">COMCYBER ORION 26</div>
-      <div class="cert-meta">13e/National · Mars 2026</div>
+      <div class="cert-meta">13e/1006 · National · Mars 2026</div>
     </div>
   </div>
 
@@ -358,7 +386,8 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
     <div class="cert-info">
       <div class="cert-name">Mission Vérité</div>
       <div class="cert-issuer">BPIFrance iO · Hack'Olyte</div>
-      <div class="cert-meta">CTF OSINT 2025</div>
+      <div class="cert-meta">21e/225 · BPIFrance iO · Hack'Olyte</div>
+      <a class="cert-verify" href="https://badges.parchment.eu/public/assertions/E0NZC1jRReKSfj7ShZRoGA?identity__email=lirada97@gmail.com" target="_blank" rel="noopener">✓ Vérifier</a>
     </div>
   </div>
 
@@ -378,7 +407,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <div class="cert-name">OSINT Specialist</div>
       <div class="cert-issuer">OSINT Industries</div>
       <div class="cert-meta">250 points</div>
-      <a class="cert-verify" href="https://app.osint.industries/verify/4867b058-1b0a-481e-83cf-f3a60063cd57" target="_blank" rel="noopener">✓ Vérifier</a>
+      <a class="cert-verify" href="/assets/badges/4867b058-1b0a-481e-83cf-f3a60063cd57.pdf" target="_blank" rel="noopener">🖼️ Voir</a>
     </div>
   </div>
 
@@ -388,7 +417,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <div class="cert-name">OSINT Analyst</div>
       <div class="cert-issuer">OSINT Industries</div>
       <div class="cert-meta">100 points</div>
-      <a class="cert-verify" href="https://app.osint.industries/verify/78e9a046-b61d-4030-8592-e04c3a39e84e" target="_blank" rel="noopener">✓ Vérifier</a>
+      <a class="cert-verify" href="/assets/badges/78e9a046-b61d-4030-8592-e04c3a39e84e.pdf" target="_blank" rel="noopener">🖼️ Voir</a>
     </div>
   </div>
 
@@ -398,7 +427,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <div class="cert-name">OSINT Rookie</div>
       <div class="cert-issuer">OSINT Industries</div>
       <div class="cert-meta">50 points</div>
-      <a class="cert-verify" href="https://app.osint.industries/verify/830290ce-1c52-4024-aeb6-a0690f177244" target="_blank" rel="noopener">✓ Vérifier</a>
+      <a class="cert-verify" href="/assets/badges/830290ce-1c52-4024-aeb6-a0690f177244.pdf" target="_blank" rel="noopener">🖼️ Voir</a>
     </div>
   </div>
 
@@ -408,6 +437,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <div class="cert-name">Intro Chinese OSINT</div>
       <div class="cert-issuer">Hacktoria</div>
       <div class="cert-meta">Certificate of Competence</div>
+      <a class="cert-verify" href="/assets/badges/intro_chinese_osint_Hacktoria.pdf" target="_blank" rel="noopener">🖼️ Voir</a>
     </div>
   </div>
 
@@ -417,6 +447,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
       <div class="cert-name">CTF ENEDIS Inter-Écoles</div>
       <div class="cert-issuer">HackTheBox</div>
       <div class="cert-meta">12e/34 équipes · 15/20 challenges · 6600 pts · 28/11/2025</div>
+      <a class="cert-verify" href="/assets/badges/Certificate%20ENEDIS%20CTF.pdf" target="_blank" rel="noopener">🖼️ Voir</a>
     </div>
   </div>
 
@@ -425,6 +456,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
     <div class="cert-info">
       <div class="cert-name">Hates Challenge Finisher</div>
       <div class="cert-issuer">OsintForFun</div>
+      <a class="cert-verify" href="https://www.badgeforge.eu/verify/b73ba7340be7cdc3185b8d77706b6ee576731de93f7082583ab3d78493ebf51e" target="_blank" rel="noopener">✓ Vérifier</a>
     </div>
   </div>
 
@@ -433,6 +465,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
     <div class="cert-info">
       <div class="cert-name">CTF Canéléa 2025 Finisher</div>
       <div class="cert-issuer">OsintForFun</div>
+      <a class="cert-verify" href="https://www.badgeforge.eu/verify/3137b4006f9fd5e331696448940db50079eaf695fe8e94aa5325593e130613b9" target="_blank" rel="noopener">✓ Vérifier</a>
     </div>
   </div>
 
@@ -441,6 +474,7 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
     <div class="cert-info">
       <div class="cert-name">OSINT Practical Basics</div>
       <div class="cert-issuer">OsintForFun</div>
+      <a class="cert-verify" href="https://www.badgeforge.eu/verify/3fd9eb7d02be10b5f9a9ae7b5bbdb6a246aba8553db104135260f58d074010fa" target="_blank" rel="noopener">✓ Vérifier</a>
     </div>
   </div>
 
