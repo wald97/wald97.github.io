@@ -487,6 +487,15 @@ Si une page t'a fait dire *"ah ouais, j'aurais pas pensé à ça"*, alors le con
   </div>
 
   <div class="cert-card">
+    <img class="cert-badge-img" src="/assets/badges/adoption_2026_finisher.jpg" alt="ADOPTION 2026-FINISHER">
+    <div class="cert-info">
+      <div class="cert-name">ADOPTION 2026-FINISHER</div>
+      <div class="cert-issuer">OsintForFun</div>
+      <a class="cert-verify" href="https://www.badgeforge.eu/verify/e435363e04ba6cb3e6eea61e12c4cddee4f04e6791e25cfe9fb91ed6cda08cba" target="_blank" rel="noopener">✓ Vérifier</a>
+    </div>
+  </div>
+
+  <div class="cert-card">
     <img class="cert-badge-img" src="/assets/badges/Bases_de_lIA_generative_EFREI.png" alt="EFREI Generative AI Basics">
     <div class="cert-info">
       <div class="cert-name">Generative AI Basics</div>
