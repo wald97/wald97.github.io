@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var navLinks = document.querySelectorAll('.pf-nav a');
+  var navLinks = document.querySelectorAll('.pf-app a[href^="#"]');
   var sections = document.querySelectorAll('.pf-section');
   var aside = document.querySelector('.pf-aside');
   var toggler = document.querySelector('.pf-nav-toggler');
@@ -60,6 +60,28 @@
         group.style.display = groupHasMatch ? '' : 'none';
       });
       if (wuEmpty) wuEmpty.hidden = anyVisible;
+    });
+  }
+
+  // Lightbox: click a badge/logo image to see it enlarged
+  var zoomables = document.querySelectorAll('.cert-badge-img, .rank-logo');
+  if (zoomables.length) {
+    var lb = document.createElement('div');
+    lb.className = 'pf-lightbox';
+    lb.innerHTML = '<span class="pf-lightbox-close">&times;</span><img alt="">';
+    document.body.appendChild(lb);
+    var lbImg = lb.querySelector('img');
+
+    zoomables.forEach(function (img) {
+      img.addEventListener('click', function () {
+        lbImg.src = img.getAttribute('src');
+        lbImg.alt = img.getAttribute('alt') || '';
+        lb.classList.add('open');
+      });
+    });
+
+    lb.addEventListener('click', function () {
+      lb.classList.remove('open');
     });
   }
 

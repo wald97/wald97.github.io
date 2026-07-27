@@ -36,15 +36,14 @@ description: >-
       <div class="pf-about-text">
         <p>Étudiant en <strong>M2 Cybersécurité à l'EFREI Paris</strong>, je me suis reconverti du sport vers la cybersécurité — et j'y ai trouvé une vraie obsession : l'<strong>OSINT</strong>.</p>
         <p>Ce site n'est pas une vitrine figée, c'est un <strong>carnet de terrain</strong>. Ici, je démonte des challenges, je teste des hypothèses, je pivote, je recoupe. Parfois ça marche du premier coup, parfois non — et c'est justement ça qui est intéressant.</p>
-        <p>L'OSINT, pour moi, ce n'est pas juste « chercher sur Google ». C'est :</p>
-        <ul>
-          <li>relier des indices faibles</li>
-          <li>exploiter le contexte</li>
-          <li>accepter l'incertitude</li>
-          <li>faire des hypothèses raisonnables</li>
-          <li>savoir quand une piste est morte</li>
-        </ul>
-        <p>J'aime bien appeler ça de la <strong>guesstimation contrôlée</strong> : pas parfaite, pas juridique, mais souvent redoutablement efficace en CTF.</p>
+        <p>L'OSINT, pour moi, ce n'est pas juste « chercher sur Google ». C'est relier des indices faibles, exploiter le contexte, accepter l'incertitude, et savoir quand une piste est morte :</p>
+        <div class="pf-tag-row">
+          <span class="pf-pill">Corrélation de sources</span>
+          <span class="pf-pill">Hypothèses raisonnées</span>
+          <span class="pf-pill">Rigueur méthodo</span>
+          <span class="pf-pill">Esprit critique</span>
+        </div>
+        <p>J'appelle ça de la <strong>guesstimation contrôlée</strong> : pas parfaite, pas juridique, mais souvent redoutablement efficace en CTF.</p>
       </div>
 
       <div class="pf-info-grid">
@@ -63,6 +62,36 @@ description: >-
         <div class="pf-info-item">
           <div class="pf-info-label">Disponibilité</div>
           <div class="pf-info-value">En recherche d'opportunité</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pf-skills">
+      <h3 class="pf-cat-title">Compétences</h3>
+      <div class="pf-skills-grid">
+        <div class="pf-skill">
+          <div class="pf-skill-head"><span>OSINT &amp; Investigation numérique</span><span>95%</span></div>
+          <div class="pf-skill-track"><div class="pf-skill-fill" style="width:95%"></div></div>
+        </div>
+        <div class="pf-skill">
+          <div class="pf-skill-head"><span>Cyber Threat Intelligence (CTI)</span><span>85%</span></div>
+          <div class="pf-skill-track"><div class="pf-skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="pf-skill">
+          <div class="pf-skill-head"><span>Analyse SOCMINT / GEOINT</span><span>90%</span></div>
+          <div class="pf-skill-track"><div class="pf-skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="pf-skill">
+          <div class="pf-skill-head"><span>Rédaction de rapports &amp; méthodologie</span><span>85%</span></div>
+          <div class="pf-skill-track"><div class="pf-skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="pf-skill">
+          <div class="pf-skill-head"><span>Travail d'équipe / CTF collaboratif</span><span>90%</span></div>
+          <div class="pf-skill-track"><div class="pf-skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="pf-skill">
+          <div class="pf-skill-head"><span>Anglais professionnel</span><span>80%</span></div>
+          <div class="pf-skill-track"><div class="pf-skill-fill" style="width:80%"></div></div>
         </div>
       </div>
     </div>
@@ -115,6 +144,18 @@ description: >-
       </div>
 
       <p class="pf-thanks">Merci à toute l'équipe <strong>Tacosint</strong> pour l'organisation et la qualité du CTF. Merci également aux partenaires <strong>Oscar Zulu Osint Crew</strong>, <strong>Hack'Olyte</strong> et <strong>BadgeForge</strong>.<br>Team Arlequins, prête pour la suite. 🃏</p>
+    </div>
+
+    <div class="pf-team-banner">
+      <div class="pf-kicker" style="margin-bottom:1rem;">// autre équipe · Bleuet CTF 2026</div>
+      <p class="pf-lead"><strong>2e place au Bleuet CTF 2026</strong> avec l'équipe <strong>404 Job Not Found</strong> — en une seule journée, flag final rendu avant que la plupart des équipes aient fini leur café. Merci à <strong>Bleuet de France</strong> et à <strong>AEGE</strong> pour l'organisation et la qualité des épreuves.</p>
+      <div class="pf-team-stats">
+        <div class="pf-stat"><div class="pf-stat-value">2e</div><div class="pf-stat-label">Classement Bleuet CTF 2026</div></div>
+        <div class="pf-stat"><div class="pf-stat-value">1 jour</div><div class="pf-stat-label">Durée</div></div>
+      </div>
+      <div class="pf-team-members">
+        <span class="pf-member-chip">🕵️ 404 Job Not Found</span>
+      </div>
     </div>
   </div>
 </section>
@@ -216,28 +257,6 @@ description: >-
       {% for post in enquete_posts %}{% include post-card.html post=post %}{% endfor %}
     </div>
 
-    <h3 class="section-title">📡 Actus récentes</h3>
-    <div class="pf-feed">
-
-      <div class="pf-feed-item">
-        <div class="pf-feed-date">Via LinkedIn</div>
-        <div class="pf-feed-title">Top 1 sur OSINTOPIA, Top 1 sur OSINT Industries, 2e sur The OSINT Newsletter</div>
-        <div class="pf-feed-text">Semaine chargée : <strong>Top 1 sur OSINTOPIA</strong>, <strong>Top 1 sur OSINT Industries</strong>, <strong>2e sur The OSINT Newsletter</strong>, et le challenge ultime d'OSINT-FR terminé, ce qui m'a propulsé <strong>3e sur la plateforme</strong>. Des CTF sur internet, pas une coupe du monde — mais l'OSINT c'est ma came, et je passe mes soirées à recouper des métadonnées pour le fun. Toujours en recherche d'une opportunité en <strong>Cyber Threat Intelligence</strong> ou en tant qu'<strong>analyste OSINT</strong>.</div>
-      </div>
-
-      <div class="pf-feed-item">
-        <div class="pf-feed-date">Via LinkedIn</div>
-        <div class="pf-feed-title">2e place au Bleuet CTF 2026 avec « 404 Job Not Found »</div>
-        <div class="pf-feed-text">Avec l'équipe <strong>404 Job Not Found</strong>, on a terminé <strong>2e du Bleuet CTF 2026</strong> — en une seule journée, flag final rendu avant que la plupart des équipes aient fini leur café. Merci à <strong>Bleuet de France</strong> et à <strong>AEGE</strong> pour l'organisation et la qualité des épreuves.</div>
-      </div>
-
-      <div class="pf-feed-item">
-        <div class="pf-feed-date">Via LinkedIn</div>
-        <div class="pf-feed-title">OSINT-FR / Osintracker : 124 flags, une autre catégorie de difficulté</div>
-        <div class="pf-feed-text">Objectivement l'une des plateformes les plus dures sur lesquelles j'ai mis les mains : <strong>124 flags</strong>, chacun arraché dans la douleur. Ce qui distingue OSINT-FR, c'est que les challenges sont de vraies enquêtes — une cible, des fils à tirer, des dead ends, et cette sensation particulière quand tout s'assemble enfin. C'est là que j'ai vraiment compris ce que veut dire raisonner en investigateur : pas juste chercher, mais recouper, douter, reformuler, chercher encore.</div>
-      </div>
-
-    </div>
   </div>
 </section>
 
