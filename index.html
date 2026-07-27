@@ -1,4 +1,234 @@
 ---
-layout: home
-# Index page
+layout: portfolio
+title: Accueil
+description: >-
+  Wald — Étudiant M2 Cybersécurité EFREI, OSINT / CTI / CTF Competitor. Write-ups, enquêtes,
+  classements et certifications OSINT.
 ---
+
+<section id="home" class="pf-section active pf-home">
+  <div>
+    <img class="pf-home-avatar" src="{{ site.avatar | relative_url }}" alt="Avatar">
+    <h1>Salut, je suis <span>Wald</span></h1>
+    <div class="pf-typed-wrap">
+      <span class="pf-typed" data-strings='["OSINT Investigator", "CTF Competitor", "Threat Intel Enthusiast", "M2 Cybersécurité @ EFREI Paris"]'></span>
+    </div>
+    <div class="pf-badges-row">
+      <span class="pf-pill">M2 Cybersécurité · EFREI Paris</span>
+      <span class="pf-pill">OSINT</span>
+      <span class="pf-pill">CTI</span>
+      <span class="pf-pill">CTF</span>
+      <span class="pf-pill">🟢 Ouvert aux opportunités</span>
+    </div>
+    <div>
+      <a href="#writeups" class="pf-btn solid">Voir les write-ups</a>
+      <a href="#contact" class="pf-btn">Me contacter</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="pf-section">
+  <div class="pf-container">
+    <div class="pf-kicker">// about</div>
+    <h2 class="pf-section-title">Qui suis-je</h2>
+
+    <div class="pf-about-grid">
+      <div class="pf-about-text">
+        <p>Étudiant en <strong>M2 Cybersécurité à l'EFREI Paris</strong>, je me suis reconverti du sport vers la cybersécurité — et j'y ai trouvé une vraie obsession : l'<strong>OSINT</strong>.</p>
+        <p>Ce site n'est pas une vitrine figée, c'est un <strong>carnet de terrain</strong>. Ici, je démonte des challenges, je teste des hypothèses, je pivote, je recoupe. Parfois ça marche du premier coup, parfois non — et c'est justement ça qui est intéressant.</p>
+        <p>L'OSINT, pour moi, ce n'est pas juste « chercher sur Google ». C'est :</p>
+        <ul>
+          <li>relier des indices faibles</li>
+          <li>exploiter le contexte</li>
+          <li>accepter l'incertitude</li>
+          <li>faire des hypothèses raisonnables</li>
+          <li>savoir quand une piste est morte</li>
+        </ul>
+        <p>J'aime bien appeler ça de la <strong>guesstimation contrôlée</strong> : pas parfaite, pas juridique, mais souvent redoutablement efficace en CTF.</p>
+      </div>
+
+      <div class="pf-info-grid">
+        <div class="pf-info-item">
+          <div class="pf-info-label">Formation</div>
+          <div class="pf-info-value">M2 Cybersécurité — EFREI Paris</div>
+        </div>
+        <div class="pf-info-item">
+          <div class="pf-info-label">Spécialités</div>
+          <div class="pf-info-value">OSINT · CTI · Threat Hunting</div>
+        </div>
+        <div class="pf-info-item">
+          <div class="pf-info-label">Terrain</div>
+          <div class="pf-info-value">CTF OSINT (solo &amp; équipe)</div>
+        </div>
+        <div class="pf-info-item">
+          <div class="pf-info-label">Disponibilité</div>
+          <div class="pf-info-value">En recherche d'opportunité</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cert-honors" class="pf-section">
+  <div class="pf-container">
+    <div class="pf-kicker">// track record</div>
+    <h2 class="pf-section-title">Cert &amp; Honors</h2>
+    <p class="pf-lead">Classements en direct et certifications obtenues sur les principales plateformes OSINT / CTF.</p>
+    {% include certs-honors.html %}
+  </div>
+</section>
+
+<section id="team-arlequins" class="pf-section">
+  <div class="pf-container">
+    <div class="pf-kicker">// ctf team</div>
+    <h2 class="pf-section-title">Team Arlequins 🃏</h2>
+
+    <div class="pf-team-banner">
+      <p class="pf-lead">Composée de <strong>Hadrien D.</strong>, <strong>Christophe Da Cruz</strong>, <strong>Franck</strong> et moi-même, la Team Arlequins a affronté le <strong>CTF Tacosint — L'appel de la forêt</strong>, une aventure OSINT de plusieurs jours organisée par Tacosint.</p>
+
+      <div class="pf-team-stats">
+        <div class="pf-stat"><div class="pf-stat-value">6e / 202</div><div class="pf-stat-label">Classement général</div></div>
+        <div class="pf-stat"><div class="pf-stat-value">5220</div><div class="pf-stat-label">Points</div></div>
+        <div class="pf-stat"><div class="pf-stat-value">3</div><div class="pf-stat-label">Erreurs</div></div>
+        <div class="pf-stat"><div class="pf-stat-value">🐆 1er</div><div class="pf-stat-label">Classement speedrun</div></div>
+        <div class="pf-stat"><div class="pf-stat-value">46h09m01s</div><div class="pf-stat-label">Temps speedrun</div></div>
+      </div>
+
+      <p class="pf-lead">Sur plus de 30 équipes ayant terminé la trame principale, seulement <strong>4 ont réussi à finir dès le premier week-end</strong>. On en fait partie. Un léger goût d'inachevé de ne pas être montés sur le podium général, mais cette expérience nous a fait progresser en rigueur et en méthode — on reviendra plus forts sur le prochain CTF.</p>
+
+      <div class="pf-team-members">
+        <span class="pf-member-chip">🃏 Wald (David)</span>
+        <span class="pf-member-chip">🃏 Hadrien D.</span>
+        <span class="pf-member-chip">🃏 Christophe Da Cruz</span>
+        <span class="pf-member-chip">🃏 Franck</span>
+      </div>
+
+      <div class="pf-badges-row" style="justify-content:flex-start;">
+        <a class="pf-pill" href="https://www.badgeforge.eu/verify/88c3ecf83fe760ba66807da52c2ec6ed4442a60c8ca71f8b69c86592718c6629" target="_blank" rel="noopener">🌲 Badge Survivor — Chapitre 1</a>
+        <a class="pf-pill" href="https://www.badgeforge.eu/verify/f4d45dc27f0ca68a4b3d007facece3ea832aecbac0cf764cb7c4079c700ced3a" target="_blank" rel="noopener">🐆 Badge Speedrun Finisher</a>
+      </div>
+
+      <div class="pf-photo-grid">
+        <div class="pf-photo-placeholder"><i class="fa-solid fa-image"></i>Photo équipe à venir</div>
+        <div class="pf-photo-placeholder"><i class="fa-solid fa-image"></i>Photo équipe à venir</div>
+        <div class="pf-photo-placeholder"><i class="fa-solid fa-image"></i>Photo équipe à venir</div>
+      </div>
+
+      <p class="pf-thanks">Merci à toute l'équipe <strong>Tacosint</strong> pour l'organisation et la qualité du CTF. Merci également aux partenaires <strong>Oscar Zulu Osint Crew</strong>, <strong>Hack'Olyte</strong> et <strong>BadgeForge</strong>.<br>Team Arlequins, prête pour la suite. 🃏</p>
+    </div>
+  </div>
+</section>
+
+<section id="writeups" class="pf-section">
+  <div class="pf-container">
+    <div class="pf-kicker">// write-ups</div>
+    <h2 class="pf-section-title">Write-ups CTF &amp; OSINT</h2>
+    <p class="pf-lead">Challenges CTF analysés étape par étape : OSINT, stéganographie, GEOINT, dark web… Des méthodes reproductibles, pas de magie.</p>
+
+    <div class="pf-posts-grid">
+      {% for post in site.posts %}
+        {% unless post.categories contains "Enquête" %}
+        <a class="pf-post-card" href="{{ post.url | relative_url }}">
+          {% if post.image %}
+          <img class="pf-post-cover" src="{{ post.image.path | relative_url }}" alt="{{ post.title }}" loading="lazy">
+          {% endif %}
+          <div class="pf-post-body">
+            <div class="pf-post-cat">{{ post.categories | first }}</div>
+            <div class="pf-post-title">{{ post.title }}</div>
+            {% if post.description %}<div class="pf-post-desc">{{ post.description | truncate: 110 }}</div>{% endif %}
+            <div class="pf-post-meta"><span>{{ post.date | date: '%d/%m/%Y' }}</span><span>Lire →</span></div>
+          </div>
+        </a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="enquetes" class="pf-section">
+  <div class="pf-container">
+    <div class="pf-kicker">// enquêtes</div>
+    <h2 class="pf-section-title">Enquêtes</h2>
+    <p class="pf-lead">Au-delà des CTF, certains sujets méritent une vraie enquête de terrain : recoupement de sources ouvertes, attribution, chronologie des faits. Pas de flag à la fin — juste la satisfaction de comprendre comment on arrive à une réponse.</p>
+
+    <div class="pf-posts-grid">
+      {% assign enquete_posts = site.categories["Enquête"] %}
+      {% for post in enquete_posts %}
+        <a class="pf-post-card" href="{{ post.url | relative_url }}">
+          {% if post.image %}
+          <img class="pf-post-cover" src="{{ post.image.path | relative_url }}" alt="{{ post.title }}" loading="lazy">
+          {% endif %}
+          <div class="pf-post-body">
+            <div class="pf-post-cat">{{ post.categories | first }}</div>
+            <div class="pf-post-title">{{ post.title }}</div>
+            {% if post.description %}<div class="pf-post-desc">{{ post.description | truncate: 110 }}</div>{% endif %}
+            <div class="pf-post-meta"><span>{{ post.date | date: '%d/%m/%Y' }}</span><span>Lire →</span></div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+
+    <h3 class="section-title">📡 Actus récentes</h3>
+    <div class="pf-feed">
+
+      <div class="pf-feed-item">
+        <div class="pf-feed-date">Via LinkedIn</div>
+        <div class="pf-feed-title">Top 1 sur OSINTOPIA, Top 1 sur OSINT Industries, 2e sur The OSINT Newsletter</div>
+        <div class="pf-feed-text">Semaine chargée : <strong>Top 1 sur OSINTOPIA</strong>, <strong>Top 1 sur OSINT Industries</strong>, <strong>2e sur The OSINT Newsletter</strong>, et le challenge ultime d'OSINT-FR terminé, ce qui m'a propulsé <strong>3e sur la plateforme</strong>. Des CTF sur internet, pas une coupe du monde — mais l'OSINT c'est ma came, et je passe mes soirées à recouper des métadonnées pour le fun. Toujours en recherche d'une opportunité en <strong>Cyber Threat Intelligence</strong> ou en tant qu'<strong>analyste OSINT</strong>.</div>
+      </div>
+
+      <div class="pf-feed-item">
+        <div class="pf-feed-date">Via LinkedIn</div>
+        <div class="pf-feed-title">2e place au Bleuet CTF 2026 avec « 404 Job Not Found »</div>
+        <div class="pf-feed-text">Avec l'équipe <strong>404 Job Not Found</strong>, on a terminé <strong>2e du Bleuet CTF 2026</strong> — en une seule journée, flag final rendu avant que la plupart des équipes aient fini leur café. Merci à <strong>Bleuet de France</strong> et à <strong>AEGE</strong> pour l'organisation et la qualité des épreuves.</div>
+      </div>
+
+      <div class="pf-feed-item">
+        <div class="pf-feed-date">Via LinkedIn</div>
+        <div class="pf-feed-title">OSINT-FR / Osintracker : 124 flags, une autre catégorie de difficulté</div>
+        <div class="pf-feed-text">Objectivement l'une des plateformes les plus dures sur lesquelles j'ai mis les mains : <strong>124 flags</strong>, chacun arraché dans la douleur. Ce qui distingue OSINT-FR, c'est que les challenges sont de vraies enquêtes — une cible, des fils à tirer, des dead ends, et cette sensation particulière quand tout s'assemble enfin. C'est là que j'ai vraiment compris ce que veut dire raisonner en investigateur : pas juste chercher, mais recouper, douter, reformuler, chercher encore.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="pf-section">
+  <div class="pf-container">
+    <div class="pf-kicker">// projects</div>
+    <h2 class="pf-section-title">Projects</h2>
+    <div class="pf-project-soon">
+      <i class="fa-solid fa-hammer"></i>
+      <h4>Section en construction</h4>
+      <p>Mes projets et outils arrivent bientôt ici. Reviens un peu plus tard 👀</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="pf-section">
+  <div class="pf-container">
+    <div class="pf-kicker">// contact</div>
+    <h2 class="pf-section-title">Contact</h2>
+    <p class="pf-lead">En recherche d'une opportunité en OSINT, Cyber Threat Intelligence ou Threat Hunting. DM ouverts.</p>
+
+    <div class="pf-contact-grid">
+      <a class="pf-contact-card" href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i>
+        <h4>GitHub</h4>
+        <p>@{{ site.github.username }}</p>
+      </a>
+      <!-- LinkedIn : ajouter l'URL du profil puis décommenter
+      <a class="pf-contact-card" href="LINKEDIN_URL_ICI" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin-in"></i>
+        <h4>LinkedIn</h4>
+        <p>Envoyer un message</p>
+      </a>
+      -->
+      <a class="pf-contact-card" href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener">
+        <i class="fa-solid fa-rss"></i>
+        <h4>RSS</h4>
+        <p>Suivre les write-ups</p>
+      </a>
+    </div>
+  </div>
+</section>

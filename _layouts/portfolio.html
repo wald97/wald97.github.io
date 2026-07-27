@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'fr' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ page.title | default: site.title }}{% if page.title %} · {{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <link rel="icon" href="{{ site.avatar | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+</head>
+<body class="pf-body">
+<div class="pf pf-app">
+
+  <button class="pf-nav-toggler" aria-label="Ouvrir le menu"><span></span></button>
+
+  <aside class="pf-aside">
+    <div class="pf-aside-inner">
+      <div>
+        <div class="pf-logo">Wald<span>_</span></div>
+        <div class="pf-logo-sub">// osint · cti · ctf</div>
+      </div>
+
+      <ul class="pf-nav">
+        <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+        <li><a href="#cert-honors"><i class="fa-solid fa-medal"></i> Cert &amp; Honors</a></li>
+        <li><a href="#team-arlequins"><i class="fa-solid fa-people-group"></i> Team Arlequins</a></li>
+        <li><a href="#writeups"><i class="fa-solid fa-terminal"></i> Write-ups</a></li>
+        <li><a href="#enquetes"><i class="fa-solid fa-magnifying-glass"></i> Enquêtes</a></li>
+        <li><a href="#projects"><i class="fa-solid fa-code"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+
+      <div class="pf-socials">
+        <a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <!-- LinkedIn : ajouter l'URL du profil puis décommenter
+        <a href="LINKEDIN_URL_ICI" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        -->
+        <a href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener" title="RSS"><i class="fa-solid fa-rss"></i></a>
+      </div>
+      <div class="pf-copyright">© {{ site.time | date: '%Y' }} {{ site.social.name | default: site.title }}</div>
+    </div>
+  </aside>
+
+  <main class="pf-main">
+    {{ content }}
+  </main>
+
+</div>
+
+<script src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+</body>
+</html>
