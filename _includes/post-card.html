@@ -1,0 +1,12 @@
+{% capture pc_search %}{{ include.post.title }} {{ include.post.description }} {{ include.post.categories | join: ' ' }} {{ include.post.tags | join: ' ' }}{% endcapture %}
+<a class="pf-post-card" href="{{ include.post.url | relative_url }}" data-search="{{ pc_search | strip_html | downcase | strip_newlines | escape }}">
+  {% if include.post.image %}
+  <img class="pf-post-cover" src="{{ include.post.image.path | relative_url }}" alt="{{ include.post.title }}" loading="lazy">
+  {% endif %}
+  <div class="pf-post-body">
+    <div class="pf-post-cat">{{ include.post.categories | first }}</div>
+    <div class="pf-post-title">{{ include.post.title }}</div>
+    {% if include.post.description %}<div class="pf-post-desc">{{ include.post.description | truncate: 110 }}</div>{% endif %}
+    <div class="pf-post-meta"><span>{{ include.post.date | date: '%d/%m/%Y' }}</span><span>Lire →</span></div>
+  </div>
+</a>

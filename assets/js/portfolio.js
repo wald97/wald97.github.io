@@ -42,6 +42,27 @@
   if (!document.getElementById(initial)) initial = 'home';
   showSection(initial);
 
+  // Write-ups search filter
+  var wuSearch = document.getElementById('wu-search');
+  if (wuSearch) {
+    var wuEmpty = document.getElementById('wu-empty');
+    var wuGroups = document.querySelectorAll('.pf-cat-group');
+    wuSearch.addEventListener('input', function () {
+      var q = wuSearch.value.trim().toLowerCase();
+      var anyVisible = false;
+      wuGroups.forEach(function (group) {
+        var groupHasMatch = false;
+        group.querySelectorAll('.pf-post-card').forEach(function (card) {
+          var match = !q || (card.getAttribute('data-search') || '').indexOf(q) !== -1;
+          card.style.display = match ? '' : 'none';
+          if (match) { groupHasMatch = true; anyVisible = true; }
+        });
+        group.style.display = groupHasMatch ? '' : 'none';
+      });
+      if (wuEmpty) wuEmpty.hidden = anyVisible;
+    });
+  }
+
   // Tiny dependency-free typewriter for the hero tagline
   var typedEl = document.querySelector('.pf-typed');
   if (typedEl) {

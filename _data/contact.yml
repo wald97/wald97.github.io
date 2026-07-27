@@ -6,6 +6,10 @@
 - type: twitter
   icon: "fa-brands fa-x-twitter"
 
+- type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/david-limoges-b16698214/"
+
 - type: rss
   icon: "fas fa-rss"
   noblank: true

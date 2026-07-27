@@ -120,27 +120,87 @@ description: >-
 </section>
 
 <section id="writeups" class="pf-section">
-  <div class="pf-container">
+  <div class="pf-container pf-container-wide">
     <div class="pf-kicker">// write-ups</div>
     <h2 class="pf-section-title">Write-ups CTF &amp; OSINT</h2>
     <p class="pf-lead">Challenges CTF analysés étape par étape : OSINT, stéganographie, GEOINT, dark web… Des méthodes reproductibles, pas de magie.</p>
 
-    <div class="pf-posts-grid">
-      {% for post in site.posts %}
-        {% unless post.categories contains "Enquête" %}
-        <a class="pf-post-card" href="{{ post.url | relative_url }}">
-          {% if post.image %}
-          <img class="pf-post-cover" src="{{ post.image.path | relative_url }}" alt="{{ post.title }}" loading="lazy">
-          {% endif %}
-          <div class="pf-post-body">
-            <div class="pf-post-cat">{{ post.categories | first }}</div>
-            <div class="pf-post-title">{{ post.title }}</div>
-            {% if post.description %}<div class="pf-post-desc">{{ post.description | truncate: 110 }}</div>{% endif %}
-            <div class="pf-post-meta"><span>{{ post.date | date: '%d/%m/%Y' }}</span><span>Lire →</span></div>
+    <div class="pf-writeups-layout">
+      <div class="pf-writeups-main">
+
+        <div class="pf-search-wrap">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="wu-search" class="pf-search-input" placeholder="Rechercher un write-up (titre, tag, catégorie)…" autocomplete="off">
+        </div>
+
+        {% assign cat_ctfrei = site.categories["CTFREI"] | sort: 'date' | reverse %}
+        {% if cat_ctfrei.size > 0 %}
+        <div class="pf-cat-group" data-group>
+          <h3 class="pf-cat-title">CTFREI</h3>
+          <div class="pf-posts-grid">
+            {% for post in cat_ctfrei %}{% include post-card.html post=post %}{% endfor %}
           </div>
-        </a>
-        {% endunless %}
-      {% endfor %}
+        </div>
+        {% endif %}
+
+        {% assign cat_oi = site.categories["Osint Industries"] | sort: 'date' | reverse %}
+        {% if cat_oi.size > 0 %}
+        <div class="pf-cat-group" data-group>
+          <h3 class="pf-cat-title">OSINT Industries</h3>
+          <div class="pf-posts-grid">
+            {% for post in cat_oi %}{% include post-card.html post=post %}{% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% assign cat_ouk = site.categories["Osint UK"] | sort: 'date' | reverse %}
+        {% if cat_ouk.size > 0 %}
+        <div class="pf-cat-group" data-group>
+          <h3 class="pf-cat-title">OSINT UK</h3>
+          <div class="pf-posts-grid">
+            {% for post in cat_ouk %}{% include post-card.html post=post %}{% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% assign cat_cn = site.categories["Cybernight2025"] | sort: 'date' | reverse %}
+        {% if cat_cn.size > 0 %}
+        <div class="pf-cat-group" data-group>
+          <h3 class="pf-cat-title">Cybernight 2025</h3>
+          <div class="pf-posts-grid">
+            {% for post in cat_cn %}{% include post-card.html post=post %}{% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% assign cat_hd = site.categories["HackDay2026"] | sort: 'date' | reverse %}
+        {% if cat_hd.size > 0 %}
+        <div class="pf-cat-group" data-group>
+          <h3 class="pf-cat-title">HackDay 2026</h3>
+          <div class="pf-posts-grid">
+            {% for post in cat_hd %}{% include post-card.html post=post %}{% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <p class="pf-search-empty" id="wu-empty" hidden>Aucun write-up ne correspond à ta recherche.</p>
+      </div>
+
+      <aside class="pf-archive">
+        <h3 class="pf-cat-title">📅 Archives</h3>
+        <div class="pf-archive-list">
+          {% assign all_posts_desc = site.posts | sort: 'date' | reverse %}
+          {% assign grouped_years = all_posts_desc | group_by_exp: "post", "post.date | date: '%Y'" %}
+          {% for year in grouped_years %}
+          <div class="pf-archive-year">{{ year.name }}</div>
+          <ul class="pf-archive-items">
+            {% for post in year.items %}
+            <li><a href="{{ post.url | relative_url }}"><span class="pf-archive-date">{{ post.date | date: "%d %b" }}</span>{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endfor %}
+        </div>
+      </aside>
     </div>
   </div>
 </section>
@@ -152,20 +212,8 @@ description: >-
     <p class="pf-lead">Au-delà des CTF, certains sujets méritent une vraie enquête de terrain : recoupement de sources ouvertes, attribution, chronologie des faits. Pas de flag à la fin — juste la satisfaction de comprendre comment on arrive à une réponse.</p>
 
     <div class="pf-posts-grid">
-      {% assign enquete_posts = site.categories["Enquête"] %}
-      {% for post in enquete_posts %}
-        <a class="pf-post-card" href="{{ post.url | relative_url }}">
-          {% if post.image %}
-          <img class="pf-post-cover" src="{{ post.image.path | relative_url }}" alt="{{ post.title }}" loading="lazy">
-          {% endif %}
-          <div class="pf-post-body">
-            <div class="pf-post-cat">{{ post.categories | first }}</div>
-            <div class="pf-post-title">{{ post.title }}</div>
-            {% if post.description %}<div class="pf-post-desc">{{ post.description | truncate: 110 }}</div>{% endif %}
-            <div class="pf-post-meta"><span>{{ post.date | date: '%d/%m/%Y' }}</span><span>Lire →</span></div>
-          </div>
-        </a>
-      {% endfor %}
+      {% assign enquete_posts = site.categories["Enquête"] | sort: 'date' | reverse %}
+      {% for post in enquete_posts %}{% include post-card.html post=post %}{% endfor %}
     </div>
 
     <h3 class="section-title">📡 Actus récentes</h3>
@@ -217,13 +265,11 @@ description: >-
         <h4>GitHub</h4>
         <p>@{{ site.github.username }}</p>
       </a>
-      <!-- LinkedIn : ajouter l'URL du profil puis décommenter
-      <a class="pf-contact-card" href="LINKEDIN_URL_ICI" target="_blank" rel="noopener">
+      <a class="pf-contact-card" href="https://www.linkedin.com/in/david-limoges-b16698214/" target="_blank" rel="noopener">
         <i class="fa-brands fa-linkedin-in"></i>
         <h4>LinkedIn</h4>
         <p>Envoyer un message</p>
       </a>
-      -->
       <a class="pf-contact-card" href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener">
         <i class="fa-solid fa-rss"></i>
         <h4>RSS</h4>
