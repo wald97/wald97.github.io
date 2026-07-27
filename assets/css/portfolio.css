@@ -480,20 +480,46 @@ body.pf-body {
 .pf-stat-value { font-family: var(--mono); font-size: 1.5rem; font-weight: 800; color: var(--accent); }
 .pf-stat-label { font-size: .7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .04em; margin-top: .3rem; }
 
-.pf-team-members {
+.pf-team-header {
   display: flex;
-  flex-wrap: wrap;
-  gap: .6rem;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+.pf-team-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.pf-team-roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: .8rem;
   margin: 1.2rem 0;
 }
-.pf-member-chip {
-  font-family: var(--mono);
-  font-size: .78rem;
-  padding: .4em .9em;
-  border-radius: 20px;
+.pf-member-card {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
   border: 1px solid var(--border);
-  color: var(--text);
+  border-radius: 10px;
+  padding: .8rem 1rem;
   background: var(--card);
+}
+.pf-member-emoji { font-size: 1.3rem; }
+.pf-member-name { font-family: var(--mono); font-size: .85rem; color: var(--text); display: flex; align-items: center; gap: .5rem; }
+.pf-member-tag {
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--accent);
+  border: 1px solid #22c55e55;
+  border-radius: 20px;
+  padding: .1em .5em;
 }
 
 .pf-photo-grid {
@@ -518,6 +544,17 @@ body.pf-body {
   padding: 1rem;
 }
 .pf-photo-placeholder i { font-size: 1.6rem; }
+
+.pf-team-photo {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  cursor: zoom-in;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.pf-team-photo:hover { transform: translateY(-3px); border-color: var(--border-hover); }
 
 .pf-thanks { color: var(--text-dim); line-height: 1.7; font-size: .9rem; }
 .pf-thanks strong { color: var(--text); }

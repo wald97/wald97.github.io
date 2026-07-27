@@ -64,7 +64,7 @@
   }
 
   // Lightbox: click a badge/logo image to see it enlarged
-  var zoomables = document.querySelectorAll('.cert-badge-img, .rank-logo');
+  var zoomables = document.querySelectorAll('.cert-badge-img, .rank-logo, .pf-team-photo');
   if (zoomables.length) {
     var lb = document.createElement('div');
     lb.className = 'pf-lightbox';
