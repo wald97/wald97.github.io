@@ -324,29 +324,14 @@ body.pf-body {
 
 @media (max-width: 760px) {
   .pf-osint-graph {
-    position: static;
-    width: 100%;
-    max-width: 440px;
-    aspect-ratio: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
-    gap: 20px 4px;
-    margin: 0 auto 34px;
-    padding: 26px 10px 18px;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    background: linear-gradient(180deg, rgba(168,85,247,.05), transparent 65%);
+    width: min(380px, 92vw);
+    aspect-ratio: 1 / .95;
+    margin: 0 auto 30px;
   }
-  .pf-graph-lines, .pf-graph-pulse { display: none; }
-  .pf-graph-hub { position: static; transform: none; flex-basis: 100%; margin: 0 auto 22px; }
-  .pf-graph-node {
-    position: static;
-    left: auto; top: auto; transform: none;
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
+  .pf-home-avatar { width: 92px; height: 92px; }
+  .pf-circle-btn { width: 56px; gap: 5px; }
+  .pf-circle-btn i { width: 40px; height: 40px; font-size: .82rem; }
+  .pf-circle-btn span { font-size: .56rem; }
 }
 
 .pf-circle-btn {
@@ -1255,10 +1240,11 @@ footer[aria-label="Site Info"] a { color: var(--accent-cyan) !important; }
 @media (max-width: 575px) {
   .pf-home h1 { font-size: 1.8rem; }
   .pf-team-stats { grid-template-columns: repeat(2, 1fr); }
-  .pf-osint-graph { gap: 16px 2px; padding: 22px 4px 14px; }
-  .pf-graph-hub { width: 120px; height: 120px; }
-  .pf-circle-btn { width: 60px; }
-  .pf-circle-btn i { width: 46px; height: 46px; font-size: .95rem; }
+  .pf-osint-graph { width: min(320px, 90vw); }
+  .pf-home-avatar { width: 76px; height: 76px; }
+  .pf-circle-btn { width: 48px; }
+  .pf-circle-btn i { width: 34px; height: 34px; font-size: .72rem; }
+  .pf-circle-btn span { font-size: .5rem; }
 }
 
 /* ── Lightbox (agrandissement des badges/logos) ───────── */
