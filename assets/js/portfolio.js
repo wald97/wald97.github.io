@@ -63,26 +63,49 @@
     });
   }
 
-  // Lightbox: click a badge/logo image to see it enlarged
-  var zoomables = document.querySelectorAll('.cert-badge-img, .rank-logo, .pf-team-photo');
-  if (zoomables.length) {
+  // Lightbox: click a badge/logo image, or a PDF preview, to see it enlarged
+  var zoomables = document.querySelectorAll('.cert-badge-img, .rank-logo, .pf-team-photo, .pf-project-demos img, .pf-project-media img, .pf-member-avatar');
+  var pdfables = document.querySelectorAll('.cert-badge-pdf, .cert-pdf-link');
+  if (zoomables.length || pdfables.length) {
     var lb = document.createElement('div');
     lb.className = 'pf-lightbox';
-    lb.innerHTML = '<span class="pf-lightbox-close">&times;</span><img alt="">';
+    lb.innerHTML = '<span class="pf-lightbox-close">&times;</span><img alt=""><iframe hidden></iframe><a class="pf-lightbox-open-tab" target="_blank" rel="noopener" hidden>Ouvrir dans un onglet ⤴</a>';
     document.body.appendChild(lb);
     var lbImg = lb.querySelector('img');
+    var lbFrame = lb.querySelector('iframe');
+    var lbOpenTab = lb.querySelector('.pf-lightbox-open-tab');
+
+    function closeLightbox() {
+      lb.classList.remove('open');
+      lbFrame.src = '';
+    }
 
     zoomables.forEach(function (img) {
       img.addEventListener('click', function () {
+        lbImg.hidden = false; lbFrame.hidden = true; lbOpenTab.hidden = true;
         lbImg.src = img.getAttribute('src');
         lbImg.alt = img.getAttribute('alt') || '';
         lb.classList.add('open');
       });
     });
 
-    lb.addEventListener('click', function () {
-      lb.classList.remove('open');
+    pdfables.forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        var pdf = el.getAttribute('data-pdf');
+        if (!pdf) return;
+        e.preventDefault();
+        lbImg.hidden = true; lbFrame.hidden = false; lbOpenTab.hidden = false;
+        lbFrame.src = pdf;
+        lbOpenTab.href = pdf;
+        lb.classList.add('open');
+      });
     });
+
+    lb.addEventListener('click', function (e) {
+      if (e.target === lbFrame || e.target === lbOpenTab) return;
+      closeLightbox();
+    });
+    lb.querySelector('.pf-lightbox-close').addEventListener('click', closeLightbox);
   }
 
   // Tiny dependency-free typewriter for the hero tagline
