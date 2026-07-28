@@ -8,7 +8,33 @@ description: >-
 
 <section id="home" class="pf-section active pf-home">
   <div>
-    <img class="pf-home-avatar" src="{{ site.avatar | relative_url }}" alt="Avatar">
+    <div class="pf-osint-graph">
+      <svg class="pf-graph-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <line x1="50" y1="50" x2="50" y2="8"></line>
+        <line x1="50" y1="50" x2="14" y2="22"></line>
+        <line x1="50" y1="50" x2="86" y2="18"></line>
+        <line x1="50" y1="50" x2="8" y2="56"></line>
+        <line x1="50" y1="50" x2="92" y2="54"></line>
+        <line x1="50" y1="50" x2="20" y2="89"></line>
+        <line x1="50" y1="50" x2="80" y2="91"></line>
+        <line x1="50" y1="50" x2="50" y2="97"></line>
+      </svg>
+
+      <span class="pf-graph-pulse"></span>
+      <span class="pf-graph-pulse pf-graph-pulse-2"></span>
+
+      <img class="pf-home-avatar pf-graph-hub" src="{{ site.avatar | relative_url }}" alt="Avatar">
+
+      <a href="#home" class="pf-circle-btn pf-graph-node" style="--nx:50%;--ny:8%;" title="Home"><i class="fa-solid fa-house"></i><span>Home</span></a>
+      <a href="#about" class="pf-circle-btn pf-graph-node" style="--nx:14%;--ny:22%;" title="About"><i class="fa-solid fa-user"></i><span>About</span></a>
+      <a href="#cert-honors" class="pf-circle-btn pf-graph-node" style="--nx:86%;--ny:18%;" title="Cert &amp; Honors"><i class="fa-solid fa-medal"></i><span>Cert &amp; Honors</span></a>
+      <a href="#team-arlequins" class="pf-circle-btn pf-graph-node" style="--nx:8%;--ny:56%;" title="Team Arlequins"><i class="fa-solid fa-people-group"></i><span>Team Arlequins</span></a>
+      <a href="#writeups" class="pf-circle-btn pf-graph-node" style="--nx:92%;--ny:54%;" title="Write-ups"><i class="fa-solid fa-terminal"></i><span>Write-ups</span></a>
+      <a href="#enquetes" class="pf-circle-btn pf-graph-node" style="--nx:20%;--ny:89%;" title="Enquêtes"><i class="fa-solid fa-magnifying-glass"></i><span>Enquêtes</span></a>
+      <a href="#projects" class="pf-circle-btn pf-graph-node" style="--nx:80%;--ny:91%;" title="Projects"><i class="fa-solid fa-code"></i><span>Projects</span></a>
+      <a href="#contact" class="pf-circle-btn pf-graph-node" style="--nx:50%;--ny:97%;" title="Contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
+    </div>
+
     <h1>Salut, je suis <span>Wald</span></h1>
     <div class="pf-typed-wrap">
       <span class="pf-typed" data-strings='["OSINT Investigator", "CTF Competitor", "Threat Intel Enthusiast", "Diplômé M2 Cybersécurité et Cloud, EFREI Paris"]'></span>
@@ -24,17 +50,6 @@ description: >-
       <a href="#writeups" class="pf-btn solid">Voir les write-ups</a>
       <a href="#contact" class="pf-btn">Me contacter</a>
     </div>
-
-    <nav class="pf-home-nav-circles">
-      <a href="#home" class="pf-circle-btn" title="Home"><i class="fa-solid fa-house"></i><span>Home</span></a>
-      <a href="#about" class="pf-circle-btn" title="About"><i class="fa-solid fa-user"></i><span>About</span></a>
-      <a href="#cert-honors" class="pf-circle-btn" title="Cert &amp; Honors"><i class="fa-solid fa-medal"></i><span>Cert &amp; Honors</span></a>
-      <a href="#team-arlequins" class="pf-circle-btn" title="Team Arlequins"><i class="fa-solid fa-people-group"></i><span>Team Arlequins</span></a>
-      <a href="#writeups" class="pf-circle-btn" title="Write-ups"><i class="fa-solid fa-terminal"></i><span>Write-ups</span></a>
-      <a href="#enquetes" class="pf-circle-btn" title="Enquêtes"><i class="fa-solid fa-magnifying-glass"></i><span>Enquêtes</span></a>
-      <a href="#projects" class="pf-circle-btn" title="Projects"><i class="fa-solid fa-code"></i><span>Projects</span></a>
-      <a href="#contact" class="pf-circle-btn" title="Contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
-    </nav>
   </div>
 </section>
 
