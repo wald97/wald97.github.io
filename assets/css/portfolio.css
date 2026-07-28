@@ -267,7 +267,7 @@ body.pf-body {
   position: relative;
   width: min(640px, 94vw);
   aspect-ratio: 1 / .8;
-  margin: 0 auto 6px;
+  margin: 0 auto 34px;
 }
 .pf-graph-lines {
   position: absolute;
@@ -331,7 +331,7 @@ body.pf-body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
   }
   .pf-graph-lines, .pf-graph-pulse { display: none; }
   .pf-graph-hub { position: static; transform: none; flex-basis: 100%; margin: 0 auto 6px; }
@@ -713,23 +713,26 @@ body.pf-body {
 
 .pf-team-roster {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: .8rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   margin: 1.2rem 0;
+}
+@media (max-width: 480px) {
+  .pf-team-roster { grid-template-columns: 1fr; }
 }
 .pf-member-card {
   display: flex;
   align-items: center;
-  gap: .7rem;
+  gap: 1rem;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: .8rem 1rem;
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
   background: var(--card);
 }
 .pf-member-emoji { font-size: 1.3rem; }
 .pf-member-avatar {
-  width: 40px;
-  height: 40px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid var(--border);
@@ -738,7 +741,7 @@ body.pf-body {
   transition: transform .2s ease, border-color .2s ease;
 }
 .pf-member-avatar:hover { transform: scale(1.08); border-color: var(--border-hover); }
-.pf-member-name { font-family: var(--mono); font-size: .85rem; color: var(--text); display: flex; align-items: center; gap: .5rem; }
+.pf-member-name { font-family: var(--mono); font-size: 1rem; color: var(--text); display: flex; align-items: center; gap: .5rem; }
 .pf-member-tag {
   font-size: .62rem;
   text-transform: uppercase;
@@ -782,6 +785,8 @@ body.pf-body {
   transition: transform .2s ease, border-color .2s ease;
 }
 .pf-team-photo:hover { transform: translateY(-3px); border-color: var(--border-hover); }
+
+.pf-bleuet-photo { max-width: 340px; margin: 1.5rem auto 0; }
 
 .pf-thanks { color: var(--text-dim); line-height: 1.7; font-size: .9rem; }
 .pf-thanks strong { color: var(--text); }
@@ -917,8 +922,15 @@ body.pf-body {
 .pf-project-card:hover { border-color: var(--border-hover); }
 @media (max-width: 900px) { .pf-project-card { grid-template-columns: 1fr; } }
 
-.pf-project-media { background: var(--card); }
-.pf-project-media img { width: 100%; height: 100%; object-fit: cover; min-height: 220px; }
+.pf-project-media {
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  min-height: 240px;
+}
+.pf-project-media img { width: 100%; height: auto; max-height: 100%; object-fit: contain; }
 
 .pf-project-body { padding: 1.6rem 1.8rem; }
 .pf-project-head {
@@ -1111,6 +1123,108 @@ pre, code, kbd, .highlight, .code-header, .filepath {
   color: var(--accent);
   transform: translateY(-2px);
 }
+
+/* Harmonisation du reste du chrome Chirpy natif (topbar, panel, TOC,
+   tags, related posts, navigation, back-to-top, recherche) pour que
+   les pages de write-up ne se sentent pas comme un site a part. */
+#topbar-wrapper {
+  background: var(--panel) !important;
+  border-bottom: 1px solid var(--border);
+}
+#topbar { font-family: var(--sans); }
+#topbar-title, #breadcrumb {
+  font-family: var(--mono) !important;
+  color: var(--text) !important;
+}
+#breadcrumb a { color: var(--text-dim) !important; transition: color .2s ease; }
+#breadcrumb a:hover { color: var(--accent) !important; }
+#sidebar-trigger, #search-trigger, #search-cancel {
+  color: var(--text-dim) !important;
+}
+#sidebar-trigger:hover, #search-trigger:hover, #search-cancel:hover {
+  color: var(--accent) !important;
+}
+
+#panel-wrapper { color: var(--text-dim); }
+.panel-heading {
+  font-family: var(--mono) !important;
+  font-size: .85rem !important;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--accent-cyan) !important;
+}
+#panel-wrapper a { color: var(--text-dim); }
+#panel-wrapper a:hover { color: var(--accent) !important; }
+
+#toc-wrapper, #toc-popup-content { background: transparent; }
+#toc a { color: var(--text-dim) !important; transition: color .2s ease; }
+#toc a:hover, #toc a.is-active-link { color: var(--accent) !important; }
+#toc-bar { background: var(--panel) !important; border-color: var(--border) !important; }
+
+.post-tag,
+.btn-outline-primary,
+.btn-outline-secondary {
+  font-family: var(--mono) !important;
+  border-radius: 20px !important;
+  border-color: var(--border) !important;
+  color: var(--text-dim) !important;
+  background: var(--card-alt) !important;
+  transition: all .2s ease !important;
+}
+.post-tag:hover,
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  background: rgba(168, 85, 247, .1) !important;
+}
+.btn-outline-primary.disabled { opacity: .4; }
+
+.btn-primary {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #05060a !important;
+}
+.btn-primary:hover { background: #9333ea !important; border-color: #9333ea !important; }
+
+#related-posts { color: var(--text-dim); }
+#related-label { font-family: var(--mono) !important; color: var(--text) !important; }
+.post-preview.card {
+  background: var(--card-alt) !important;
+  border: 1px solid var(--border) !important;
+  transition: transform .2s ease, border-color .2s ease !important;
+}
+.post-preview.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover) !important;
+}
+.post-preview.card h4 { color: var(--text) !important; }
+
+#back-to-top {
+  background: var(--card-alt) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--accent) !important;
+}
+#back-to-top:hover { border-color: var(--accent) !important; }
+
+#search-result-wrapper, #search-results, #search-hints {
+  background: var(--void);
+}
+#search-input {
+  background: var(--card-alt) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+  font-family: var(--sans) !important;
+}
+#search-input:focus { border-color: var(--accent) !important; box-shadow: none !important; }
+
+.post-tail-wrapper, .post-tail-bottom, .license-wrapper, .share-label {
+  color: var(--text-faint) !important;
+}
+.share-icons a { color: var(--text-dim) !important; transition: color .2s ease; }
+.share-icons a:hover { color: var(--accent) !important; }
+
+footer[aria-label="Site Info"] a { color: var(--accent-cyan) !important; }
 
 /* Masque la sidebar uniquement quand la section Home est active ;
    les autres sections gardent la sidebar normale. */
