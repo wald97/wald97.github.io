@@ -42,6 +42,14 @@
   if (!document.getElementById(initial)) initial = 'home';
   showSection(initial);
 
+  // Same-page links that include the full path (e.g. "/#team-arlequins", used so
+  // they also work from other pages) don't get caught by the click handler above,
+  // but still trigger a native hash change when already on this page — listen for it.
+  window.addEventListener('hashchange', function () {
+    var id = (window.location.hash || '#home').slice(1);
+    if (document.getElementById(id)) showSection(id);
+  });
+
   // Write-ups search filter
   var wuSearch = document.getElementById('wu-search');
   if (wuSearch) {
