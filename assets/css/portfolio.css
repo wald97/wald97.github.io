@@ -533,7 +533,7 @@ body.pf-body {
   font-family: var(--mono);
   font-size: .82rem;
   color: var(--text);
-  margin: 0 0 .7rem;
+  margin: 0 0 1.2rem;
 }
 .pf-skill-theme-title i { color: var(--accent); }
 .pf-skill-theme .pf-tag-row { margin-bottom: 0; }
@@ -707,17 +707,19 @@ body.pf-body {
 }
 .pf-member-card {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: .8rem;
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1.1rem 1.2rem;
+  padding: 1.6rem 1.3rem;
   background: var(--card);
+  text-align: center;
 }
 .pf-member-emoji { font-size: 1.3rem; }
 .pf-member-avatar {
-  width: 68px;
-  height: 68px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid var(--border);
@@ -726,8 +728,20 @@ body.pf-body {
   transition: transform .2s ease, border-color .2s ease;
 }
 .pf-member-avatar:hover { transform: scale(1.08); border-color: var(--border-hover); }
-.pf-member-info { display: flex; flex-direction: column; gap: .4rem; text-align: left; }
-.pf-member-name { font-family: var(--mono); font-size: 1rem; color: var(--text); display: flex; align-items: center; gap: .5rem; }
+.pf-member-info { display: flex; flex-direction: column; align-items: center; gap: .5rem; text-align: center; }
+.pf-member-name {
+  font-family: var(--mono);
+  font-size: 1.35rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 .pf-member-desc { margin: 0; font-size: .78rem; line-height: 1.55; color: var(--text-dim); font-style: italic; }
 .pf-member-tag {
   font-size: .62rem;
