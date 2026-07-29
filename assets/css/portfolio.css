@@ -520,34 +520,23 @@ body.pf-body {
 .pf-soft-card span { font-size: .8rem; color: var(--text-dim); line-height: 1.55; }
 
 .pf-skills { margin-top: 3rem; }
-.pf-skills-grid {
+.pf-skills-themes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.6rem 2.5rem;
   margin-top: 1.4rem;
 }
-.pf-skill-head {
+.pf-skill-theme-title {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
   font-family: var(--mono);
-  font-size: .8rem;
+  font-size: .82rem;
   color: var(--text);
-  margin-bottom: .5rem;
+  margin: 0 0 .7rem;
 }
-.pf-skill-head span:last-child { color: var(--accent); font-weight: 700; }
-.pf-skill-track {
-  height: 8px;
-  border-radius: 4px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  overflow: hidden;
-}
-.pf-skill-fill {
-  height: 100%;
-  border-radius: 4px;
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent));
-  transition: width 1s ease;
-}
+.pf-skill-theme-title i { color: var(--accent); }
+.pf-skill-theme .pf-tag-row { margin-bottom: 0; }
 
 /* ── Rankings & certs grid (shared with legacy Chirpy pages) ── */
 .section-title {
@@ -718,7 +707,7 @@ body.pf-body {
 }
 .pf-member-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -737,7 +726,9 @@ body.pf-body {
   transition: transform .2s ease, border-color .2s ease;
 }
 .pf-member-avatar:hover { transform: scale(1.08); border-color: var(--border-hover); }
+.pf-member-info { display: flex; flex-direction: column; gap: .4rem; text-align: left; }
 .pf-member-name { font-family: var(--mono); font-size: 1rem; color: var(--text); display: flex; align-items: center; gap: .5rem; }
+.pf-member-desc { margin: 0; font-size: .78rem; line-height: 1.55; color: var(--text-dim); font-style: italic; }
 .pf-member-tag {
   font-size: .62rem;
   text-transform: uppercase;
