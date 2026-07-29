@@ -533,7 +533,7 @@ body.pf-body {
   font-family: var(--mono);
   font-size: .82rem;
   color: var(--text);
-  margin: 0 0 1.2rem;
+  margin: 0 0 1.8rem;
 }
 .pf-skill-theme-title i { color: var(--accent); }
 .pf-skill-theme .pf-tag-row { margin-bottom: 0; }
@@ -579,8 +579,23 @@ body.pf-body {
 }
 .badge-gold   { background: #ffd70018; color: var(--accent-gold); border: 1px solid #ffd70050; }
 .badge-silver { background: #c0c0c018; color: #b8c0ce; border: 1px solid #c0c0c050; }
+.badge-bronze { background: #cd7f3218; color: #e0a45c; border: 1px solid #cd7f3250; }
 .badge-blue   { background: #4a9eff18; color: var(--accent-cyan); border: 1px solid #4a9eff50; }
 .badge-default{ background: #55606618; color: var(--text-dim); border: 1px solid #55606650; }
+
+/* Podium styling: gold / silver / bronze outline for top-3 ranked cards */
+.rank-card--gold   { border-color: #ffd70070; box-shadow: 0 0 0 1px #ffd70025, 0 0 22px -10px #ffd70090; }
+.rank-card--silver { border-color: #c0c0c070; box-shadow: 0 0 0 1px #c0c0c025, 0 0 22px -10px #c0c0c090; }
+.rank-card--bronze { border-color: #cd7f3270; box-shadow: 0 0 0 1px #cd7f3225, 0 0 22px -10px #cd7f3290; }
+.rank-card--gold:hover   { border-color: #ffd700; }
+.rank-card--silver:hover { border-color: #c0c0c0; }
+.rank-card--bronze:hover { border-color: #cd7f32; }
+
+/* Platform cards: bigger logo, centered layout (logo → name → rank → link) */
+.rank-card--platform { align-items: center; text-align: center; }
+.rank-card--platform .rank-logo { width: 52px; height: 52px; }
+.rank-card--platform .rank-row { justify-content: center; }
+.rank-card--platform .rank-link { align-self: center; }
 
 .live-dot {
   display: inline-block; width: 7px; height: 7px; border-radius: 50%;
